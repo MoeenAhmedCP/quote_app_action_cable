@@ -1,0 +1,11 @@
+<%= form_for [quote, line_item_date, line_item] do |f| %>
+  <%= f.text_field :name, class: "form-control", placeholder: :name %>
+  <%= f.text_field :quantity, class: "form-control", placeholder: :quantity %>
+  <%= f.text_field :unit_price, class: "form-control", placeholder: :unit_price %>
+  <%= f.text_field :description, class: "form-control", placeholder: :description %>
+
+  <div class="line-item__actions">
+    <%= link_to "Cancel", quote_path(quote), class: "btn btn-light" %>
+    <%= f.submit class: "btn btn-secondary" %>
+  </div>
+<% end %>

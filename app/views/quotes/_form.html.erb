@@ -1,0 +1,10 @@
+<%= form_for quote do |f| %>
+  <% if quote.errors.any? %>
+    <div class="error-message">
+      <%= quote.errors.full_messages.to_sentence.capitalize %>
+    </div>
+  <% end %>
+
+  <%= f.text_field :name, class: "form-control" %>
+  <%= f.submit class: "btn btn--secondary" %>
+<% end %>
